@@ -2,6 +2,38 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AfterViewInit } from "@angular/core";
 
 
+/**
+ * # Example Use
+ * 
+ * Typescript
+ * ```typescript
+ * export class HomeComponent {
+ *
+ *  public headerNames : string[] = ['home', 'settings', 'about', 'contact'];
+ *  public logoURL: string = 'some_url';
+ *  public handlers = [this.test, this.test, this.test, this.test];
+ *  public prim = "1B2A33";
+ *  public sec = "#223333";
+ * 
+ *  constructor(private router: Router) {}
+ * 
+ *  test() {
+ *    this.router.navigateByUrl("someUrl");
+ *  }
+ *
+ *}
+ * ```
+ * 
+ * Html
+ * ```html
+ * <min-nav-bar 
+ * [actionHandlers]="handlers" 
+ * [buttonHeaders]="headerNames" 
+ * [logoURL]="logoURL" 
+ * [primaryColor]="prim" 
+ * [secondaryColor]="sec"></min-nav-bar>
+ * ```
+ */
 @Component({
   selector: 'min-nav-bar',
   templateUrl: './min-nav-bar.component.html',
@@ -52,16 +84,45 @@ export class MinNavBarComponent implements OnInit{
    */
   @Input() buttonHeaders: string[];
 
+  /**
+   * ## Input
+   * Input to a url (or direct path location if file in project) that is injected into 
+   * img url source of the project logo.
+   * 
+   * ## Example
+   * Typescript
+   * ```typescript
+   * public logoURL: string = 'some_url';
+   * ```
+   * 
+   * Html
+   * ```html
+   * <min-nav-bar 
+   * ...
+   * [logoURL]="logoURL" 
+   * ...
+   * ></min-nav-bar>
+   * ```
+   */
   @Input() logoURL: string; 
 
   @Input() primaryColor: string;
 
   @Input() secondaryColor: string;
 
+  /**
+   * @hidden
+   */
   private navControl : NavControl[] = null;
 
+  /**
+   * @hidden
+   */
   constructor() {}
-
+  
+  /**
+   * @hidden
+   */
   ngOnInit() {
     if (this.buttonHeaders.length != this.actionHandlers.length) {
       console.log('%c min-nav-bar error: %c Info: ButtonHeaders input must be of same length as ActionHandlers input.', 
@@ -81,6 +142,9 @@ export class MinNavBarComponent implements OnInit{
     }    
   }
 
+  /**
+   * @hidden
+   */
   ngAfterViewInit() {
     document.getElementById('logo').style.backgroundColor = this.primaryColor;
     document.getElementById('logo').style.borderColor = this.secondaryColor;
@@ -95,8 +159,8 @@ export class MinNavBarComponent implements OnInit{
 }
 
 /**
- * Internal interface used for min-nav-bar
- */
+* @hidden
+*/
 interface NavControl {
   text: string,
   funcIndex: number,

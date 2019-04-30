@@ -66,6 +66,36 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<h1 id="example-use">Example Use</h1>
+					</div>
+					<p>Typescript</p>
+					<pre><code class="language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> HomeComponent {
+
+ <span class="hljs-keyword">public</span> headerNames : <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'home'</span>, <span class="hljs-string">'settings'</span>, <span class="hljs-string">'about'</span>, <span class="hljs-string">'contact'</span>];
+ <span class="hljs-keyword">public</span> logoURL: <span class="hljs-built_in">string</span> = <span class="hljs-string">'some_url'</span>;
+ <span class="hljs-keyword">public</span> handlers = [<span class="hljs-keyword">this</span>.test, <span class="hljs-keyword">this</span>.test, <span class="hljs-keyword">this</span>.test, <span class="hljs-keyword">this</span>.test];
+ <span class="hljs-keyword">public</span> prim = <span class="hljs-string">"1B2A33"</span>;
+ <span class="hljs-keyword">public</span> sec = <span class="hljs-string">"#223333"</span>;
+
+ <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> router: Router</span>) {}
+
+ test() {
+   <span class="hljs-keyword">this</span>.router.navigateByUrl(<span class="hljs-string">"someUrl"</span>);
+ }
+
+}</code></pre>
+					<p>Html</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-nav-bar</span>
+[<span class="hljs-attr">actionHandlers</span>]=<span class="hljs-string">"handlers"</span>
+[<span class="hljs-attr">buttonHeaders</span>]=<span class="hljs-string">"headerNames"</span>
+[<span class="hljs-attr">logoURL</span>]=<span class="hljs-string">"logoURL"</span>
+[<span class="hljs-attr">primaryColor</span>]=<span class="hljs-string">"prim"</span>
+[<span class="hljs-attr">secondaryColor</span>]=<span class="hljs-string">"sec"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-nav-bar</span>&gt;</span></code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -85,46 +115,16 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="minnavbarcomponent.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#actionhandlers" class="tsd-kind-icon">action<wbr>Handlers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#buttonheaders" class="tsd-kind-icon">button<wbr>Headers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="minnavbarcomponent.html#navcontrol" class="tsd-kind-icon">nav<wbr>Control</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="minnavbarcomponent.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#logourl" class="tsd-kind-icon">logoURL</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#primarycolor" class="tsd-kind-icon">primary<wbr>Color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#secondarycolor" class="tsd-kind-icon">secondary<wbr>Color</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Min<wbr>Nav<wbr>Bar<wbr>Component<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="minnavbarcomponent.html" class="tsd-signature-type">MinNavBarComponent</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:53</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="minnavbarcomponent.html" class="tsd-signature-type">MinNavBarComponent</a></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -135,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">action<wbr>Handlers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:34</li>
+							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -164,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">button<wbr>Headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:51</li>
+							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:85</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -179,35 +179,51 @@
 						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-nav-bar</span> [<span class="hljs-attr">buttonHeaders</span>]=<span class="hljs-string">"headerNames"</span> <span class="hljs-attr">...</span> &gt;</span></code></pre>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="navcontrol" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> nav<wbr>Control</h3>
-					<div class="tsd-signature tsd-kind-icon">nav<wbr>Control<span class="tsd-signature-symbol">:</span> <a href="../interfaces/navcontrol.html" class="tsd-signature-type">NavControl</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="logourl" class="tsd-anchor"></a>
+					<h3>logoURL</h3>
+					<div class="tsd-signature tsd-kind-icon">logoURL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:53</li>
+							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:107</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<h2 id="input">Input</h2>
+							<p>Input to a url (or direct path location if file in project) that is injected into
+							img url source of the project logo.</p>
+						</div>
+						<h2 id="example">Example</h2>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-keyword">public</span> logoURL: <span class="hljs-built_in">string</span> = <span class="hljs-string">'some_url'</span>;</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-nav-bar</span>
+<span class="hljs-attr">...</span>
+[<span class="hljs-attr">logoURL</span>]=<span class="hljs-string">"logoURL"</span>
+<span class="hljs-attr">...</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-nav-bar</span>&gt;</span></code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="primarycolor" class="tsd-anchor"></a>
+					<h3>primary<wbr>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">primary<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:109</li>
 						</ul>
 					</aside>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="ngoninit" class="tsd-anchor"></a>
-					<h3>ng<wbr>OnInit</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">ng<wbr>OnInit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:57</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="secondarycolor" class="tsd-anchor"></a>
+					<h3>secondary<wbr>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">secondary<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:111</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -238,28 +254,25 @@
 					<li class="current tsd-kind-class">
 						<a href="minnavbarcomponent.html" class="tsd-kind-icon">Min<wbr>Nav<wbr>Bar<wbr>Component</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="minnavbarcomponent.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="minnavbarcomponent.html#actionhandlers" class="tsd-kind-icon">action<wbr>Handlers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="minnavbarcomponent.html#buttonheaders" class="tsd-kind-icon">button<wbr>Headers</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="minnavbarcomponent.html#navcontrol" class="tsd-kind-icon">nav<wbr>Control</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="minnavbarcomponent.html#logourl" class="tsd-kind-icon">logoURL</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="minnavbarcomponent.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="minnavbarcomponent.html#primarycolor" class="tsd-kind-icon">primary<wbr>Color</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="minnavbarcomponent.html#secondarycolor" class="tsd-kind-icon">secondary<wbr>Color</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="../interfaces/navcontrol.html" class="tsd-kind-icon">Nav<wbr>Control</a>
-					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#approutes" class="tsd-kind-icon">app<wbr>Routes</a>
 					</li>
