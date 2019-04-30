@@ -1,0 +1,10 @@
+<div class="navigation-bar" id="nav">
+  <div class="logo" *ngIf="logoURL" id="logo">
+    <img [src]="logoURL" class="logo-image"/>
+</div>
+  <div class="controls" *ngIf="navControl">
+    <div class="control" *ngFor="let control of navControl">
+      <button class="nav-button" (click)="actionHandlers[control.funcIndex]()" [id]="control.text">{{control.text}}</button>
+    </div>
+  </div>
+</div>

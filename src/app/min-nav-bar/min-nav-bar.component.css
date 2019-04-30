@@ -1,0 +1,124 @@
+@media only screen and (min-width: 800px) {
+    
+    .navigation-bar {
+        width: 100%;
+        height: 60px;
+        background-color: #1B2A33;
+        border-bottom: 8px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: black;
+        border-style: solid;
+        display: grid;
+        grid-template-columns: 10% 80%;
+    }
+    
+    .logo {
+        background: #1B2A33;
+        font-size: 18px;
+        border-bottom: 8px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: black;
+        border-style: solid;
+        height: 60px;
+    }
+    
+    .nav-button {
+        height: 25px;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 35px;
+        border-radius: 2px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-bottom: 2px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: black;
+        border-style: solid;
+    }
+    
+    .header {
+        margin-left: 20px;
+        margin-top: 20px;
+        color: whitesmoke;
+    }
+    
+    .logo-image {
+        height: 55px;
+        width: 55px;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+    
+    .control {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+    
+    .controls {
+        background: 1B2A33;
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 20%;
+        border-bottom: 0px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: black;
+        border-style: solid;
+    }
+    
+    div {
+        font-family: Arial, Geneva, Helvetica, sans-serif;
+    }
+    
+    
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .control {
+        display: none;
+    }
+
+    .navigation-bar {
+        width: 100%;
+        height: 60px;
+        background-color: #1B2A33;
+        border-bottom: 8px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: black;
+        border-style: solid;
+        display: grid;
+        grid-template-columns: 10% 80%;
+    }
+
+    .logo {
+        background: #1B2A33;
+        font-size: 18px;
+        border-bottom: 8px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: black;
+        border-style: solid;
+        height: 60px;
+    }
+
+    .logo-image {
+        height: 55px;
+        width: 55px;
+        margin-top: 5px;
+        margin-left: 5%;
+    }
+
+}
