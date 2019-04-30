@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked } from '@angular/core';
 import { AfterViewInit } from "@angular/core";
 
 
@@ -39,7 +39,7 @@ import { AfterViewInit } from "@angular/core";
   templateUrl: './min-nav-bar.component.html',
   styleUrls: ['./min-nav-bar.component.css']
 })
-export class MinNavBarComponent implements OnInit{
+export class MinNavBarComponent implements OnInit, AfterViewChecked{
 
   /**
    * ## Input
@@ -86,6 +86,48 @@ export class MinNavBarComponent implements OnInit{
 
   /**
    * ## Input
+   * Input array for header names corresponding to the entered drop down action handlers ([[dropDownHandlers]])
+   * 
+   * ### Example
+   * Typescript
+   * ```typescript
+   * public dropHeaders : string[] = ['home', 'profile', 'settings'];
+   * ```
+   * 
+   * Html
+   * ```html
+   * <min-nav-bar [dropDownHeaders]="dropHeaders" ... >
+   * ```
+   */
+  @Input() dropDownHeaders: string[];
+
+  /**
+   * ## Input
+   * Input array for function pointers to *drop down menu navigation action functions*.
+   * Navigation action functions should be defined in the **component implementing
+   * this navigation bar**.
+   * 
+   * ### Example
+   * 
+   * Typescript
+   * ```typescript
+   * // Routing function to home page
+   * function(id: number) handle() { 
+   *  this.router.navigateByUrl('home'); 
+   * };
+   * 
+   * // Array to pass as input into component
+   * let dropHandlers : any[] = [this.handle];
+   * ```
+   * 
+   * Html
+   * ```html
+   * <min-nav-bar [dropDownHandlers]="dropHandlers" ... ></min-nav-bar>
+   * ```
+   */
+  @Input() dropDownHandlers: any[];
+  /**
+   * ## Input
    * Input to a url (or direct path location if file in project) that is injected into 
    * img url source of the project logo.
    * 
@@ -106,14 +148,27 @@ export class MinNavBarComponent implements OnInit{
    */
   @Input() logoURL: string; 
 
+  /**
+   * ## Input
+   * Input CSS value that sets the primary color for the theme of this application.
+   */
   @Input() primaryColor: string;
 
+  /**
+   * ## Input
+   * Input CSS value that sets the secondary color for the theme of this application.
+   */
   @Input() secondaryColor: string;
 
   /**
    * @hidden
    */
   private navControl : NavControl[] = null;
+
+  /**
+   * @hidden
+   */
+  private dropDownControl: NavControl[] = null;
 
   /**
    * @hidden
@@ -131,15 +186,85 @@ export class MinNavBarComponent implements OnInit{
       return;
     }
 
-    this.navControl = [];
-    for (var i = 0; i < this.buttonHeaders.length; i++) {
-      console.log(i);
+    this.loadDesktopControls();
+    
+    // register click listener for drop down menu
+    const onClick = (e: MouseEvent) =>
+        this.onWindowClicked((<Element>e.target).className);
+    window.addEventListener('click', onClick);
+  }
+
+  loadDesktopControls() {
+      // apply all the actions to the navigation buttons
+      this.navControl = [];
+      for (var i = 0; i < this.buttonHeaders.length; i++) {
+        let control = {
+          text: this.buttonHeaders[i],
+          funcIndex: i
+        }
+        this.navControl.push(control);
+      }   
+
+      // apply all the actions to the dropdown menu
+      this.dropDownControl = [];
+        for (var i = 0; i < this.dropDownHeaders.length; i++) {
+          let control = {
+            text: this.dropDownHeaders[i],
+            funcIndex: i
+          }
+          this.dropDownControl.push(control);
+        } 
+  }
+
+  /**
+   * @hidden
+   * @param event containing resize information 
+   */
+  onResize(event) {
+    // width at which nav button dissapear
+    if (event.target.innerWidth <= 800) {
+      this.navControl = [];
+      this.dropDownControl = [];
+
+      for (var i = 0; i < this.buttonHeaders.length; i++) {
       let control = {
         text: this.buttonHeaders[i],
         funcIndex: i
       }
-      this.navControl.push(control);
-    }    
+      this.dropDownControl.push(control);
+    } 
+
+      for (var i = 0; i < this.dropDownHeaders.length; i++) {
+        let control = {
+          text: this.dropDownHeaders[i],
+          funcIndex: i
+        }
+        this.dropDownControl.push(control);
+      } 
+    } else {
+      if (this.navControl.length == 0) {
+        console.log("we are here");
+        this.loadDesktopControls();
+        this.ngAfterViewInit();
+      }
+    }
+  }
+
+  /**
+   * 
+   * @hidden
+   */
+  onWindowClicked(classname: string) {
+      if (classname != 'dropbtn' && classname != 'fas fa-ellipsis-h') {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+      }
+    }
   }
 
   /**
@@ -152,9 +277,35 @@ export class MinNavBarComponent implements OnInit{
     document.getElementById('nav').style.borderColor = this.secondaryColor;
     document.getElementById('nav').style.backgroundColor = this.primaryColor;
     for (var i = 0; i < this.buttonHeaders.length; i++) {
-      document.getElementById(this.buttonHeaders[i]).style.backgroundColor = this.secondaryColor;
-      document.getElementById(this.buttonHeaders[i]).style.borderColor = this.secondaryColor
+      if (document.getElementById(this.buttonHeaders[i])) {
+        document.getElementById(this.buttonHeaders[i]).style.backgroundColor = this.secondaryColor;
+        document.getElementById(this.buttonHeaders[i]).style.borderColor = this.secondaryColor
+      }
     }   
+  }
+
+  /**
+   * @hidden
+   */
+  ngAfterViewChecked() {
+    document.getElementById('logo').style.backgroundColor = this.primaryColor;
+    document.getElementById('logo').style.borderColor = this.secondaryColor;
+
+    document.getElementById('nav').style.borderColor = this.secondaryColor;
+    document.getElementById('nav').style.backgroundColor = this.primaryColor;
+    for (var i = 0; i < this.buttonHeaders.length; i++) {
+      if (document.getElementById(this.buttonHeaders[i])) {
+        document.getElementById(this.buttonHeaders[i]).style.backgroundColor = this.secondaryColor;
+        document.getElementById(this.buttonHeaders[i]).style.borderColor = this.secondaryColor
+      }
+    } 
+  }
+
+  /**
+   * @hidden
+   */
+  onMenuPressed() {
+    document.getElementById("myDropdown").classList.toggle("show");
   }
 }
 

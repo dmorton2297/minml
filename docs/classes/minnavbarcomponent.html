@@ -108,6 +108,7 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><span class="tsd-signature-type">OnInit</span></li>
+					<li><span class="tsd-signature-type">AfterViewChecked</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -119,9 +120,17 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#actionhandlers" class="tsd-kind-icon">action<wbr>Handlers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#buttonheaders" class="tsd-kind-icon">button<wbr>Headers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#dropdownhandlers" class="tsd-kind-icon">drop<wbr>Down<wbr>Handlers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#dropdownheaders" class="tsd-kind-icon">drop<wbr>Down<wbr>Headers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#logourl" class="tsd-kind-icon">logoURL</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#primarycolor" class="tsd-kind-icon">primary<wbr>Color</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minnavbarcomponent.html#secondarycolor" class="tsd-kind-icon">secondary<wbr>Color</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="minnavbarcomponent.html#loaddesktopcontrols" class="tsd-kind-icon">load<wbr>Desktop<wbr>Controls</a></li>
 							</ul>
 						</section>
 					</div>
@@ -135,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">action<wbr>Handlers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:68</li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L68">app/min-nav-bar/min-nav-bar.component.ts:68</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -164,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">button<wbr>Headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:85</li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L85">app/min-nav-bar/min-nav-bar.component.ts:85</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -180,12 +189,62 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="dropdownhandlers" class="tsd-anchor"></a>
+					<h3>drop<wbr>Down<wbr>Handlers</h3>
+					<div class="tsd-signature tsd-kind-icon">drop<wbr>Down<wbr>Handlers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L128">app/min-nav-bar/min-nav-bar.component.ts:128</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<h2 id="input">Input</h2>
+							<p>Input array for function pointers to <em>drop down menu navigation action functions</em>.
+								Navigation action functions should be defined in the <strong>component implementing
+							this navigation bar</strong>.</p>
+						</div>
+						<h3 id="example">Example</h3>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-comment">// Routing function to home page</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">id: <span class="hljs-built_in">number</span></span>) <span class="hljs-title">handle</span>(<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">this</span>.router.navigateByUrl(<span class="hljs-string">'home'</span>);
+};
+
+<span class="hljs-comment">// Array to pass as input into component</span>
+<span class="hljs-keyword">let</span> dropHandlers : <span class="hljs-built_in">any</span>[] = [<span class="hljs-keyword">this</span>.handle];</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-nav-bar</span> [<span class="hljs-attr">dropDownHandlers</span>]=<span class="hljs-string">"dropHandlers"</span> <span class="hljs-attr">...</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-nav-bar</span>&gt;</span></code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="dropdownheaders" class="tsd-anchor"></a>
+					<h3>drop<wbr>Down<wbr>Headers</h3>
+					<div class="tsd-signature tsd-kind-icon">drop<wbr>Down<wbr>Headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L102">app/min-nav-bar/min-nav-bar.component.ts:102</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<h2 id="input">Input</h2>
+							<p>Input array for header names corresponding to the entered drop down action handlers (<a href="minnavbarcomponent.html#dropdownhandlers">dropDownHandlers</a>)</p>
+						</div>
+						<h3 id="example">Example</h3>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-keyword">public</span> dropHeaders : <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'home'</span>, <span class="hljs-string">'profile'</span>, <span class="hljs-string">'settings'</span>];</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-nav-bar</span> [<span class="hljs-attr">dropDownHeaders</span>]=<span class="hljs-string">"dropHeaders"</span> <span class="hljs-attr">...</span> &gt;</span></code></pre>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="logourl" class="tsd-anchor"></a>
 					<h3>logoURL</h3>
 					<div class="tsd-signature tsd-kind-icon">logoURL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:107</li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L149">app/min-nav-bar/min-nav-bar.component.ts:149</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,9 +270,15 @@
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:109</li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L155">app/min-nav-bar/min-nav-bar.component.ts:155</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<h2 id="input">Input</h2>
+							<p>Input CSS value that sets the primary color for the theme of this application.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="secondarycolor" class="tsd-anchor"></a>
@@ -221,9 +286,35 @@
 					<div class="tsd-signature tsd-kind-icon">secondary<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in app/min-nav-bar/min-nav-bar.component.ts:111</li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L161">app/min-nav-bar/min-nav-bar.component.ts:161</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<h2 id="input">Input</h2>
+							<p>Input CSS value that sets the secondary color for the theme of this application.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loaddesktopcontrols" class="tsd-anchor"></a>
+					<h3>load<wbr>Desktop<wbr>Controls</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Desktop<wbr>Controls<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/6c70a36/src/app/min-nav-bar/min-nav-bar.component.ts#L197">app/min-nav-bar/min-nav-bar.component.ts:197</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -237,18 +328,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="appcomponent.html" class="tsd-kind-icon">App<wbr>Component</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="appmodule.html" class="tsd-kind-icon">App<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="approutingmodule.html" class="tsd-kind-icon">App<wbr>Routing<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="homecomponent.html" class="tsd-kind-icon">Home<wbr>Component</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -261,6 +340,12 @@
 								<a href="minnavbarcomponent.html#buttonheaders" class="tsd-kind-icon">button<wbr>Headers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="minnavbarcomponent.html#dropdownhandlers" class="tsd-kind-icon">drop<wbr>Down<wbr>Handlers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="minnavbarcomponent.html#dropdownheaders" class="tsd-kind-icon">drop<wbr>Down<wbr>Headers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="minnavbarcomponent.html#logourl" class="tsd-kind-icon">logoURL</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -268,6 +353,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="minnavbarcomponent.html#secondarycolor" class="tsd-kind-icon">secondary<wbr>Color</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="minnavbarcomponent.html#loaddesktopcontrols" class="tsd-kind-icon">load<wbr>Desktop<wbr>Controls</a>
 							</li>
 						</ul>
 					</li>

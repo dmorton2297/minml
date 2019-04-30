@@ -10,6 +10,9 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
 ];
 
+/**
+ * @ignore
+ */
 @NgModule({
   declarations: [
     AppComponent,
