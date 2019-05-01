@@ -4,13 +4,14 @@
   </div>
   <div class="controls" *ngIf="navControl">
     <div class="control" *ngFor="let control of navControl">
-      <button class="nav-button" (click)="actionHandlers[control.funcIndex]()" [id]="control.text">{{control.text}}</button>
+      <button class="nav-button" (click)="actionHandlers[control.funcIndex]()" [id]="control.text"
+      (mouseenter) ="mouseEnterButton(control.text)"  (mouseleave) ="mouseLeaveButton(control.text)">{{control.text}}</button>
     </div>
   </div>
   <div class="dropdown" *ngIf="dropDownControl">
-    <button (click)="onMenuPressed()" class="dropbtn"><i class="fas fa-ellipsis-h"></i></button>
+    <button (click)="onMenuPressed()" class="dropbtn"><i class="fas fa-bars"></i></button>
     <div id="myDropdown" class="dropdown-content" >
-      <a *ngFor="let control of dropDownControl" href="#" (click)="dropDownHandlers[control.funcIndex]()">
+      <a *ngFor="let control of dropDownControl" (click)="dropDownHandlers[control.funcIndex]()">
         {{control.text}}
       </a>
     </div>
