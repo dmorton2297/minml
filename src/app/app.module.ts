@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MinNavBarComponent } from './min-nav-bar/min-nav-bar.component';
 import { HomeComponent } from './home/home.component';
+import { MinBoxComponent } from './min-box/min-box.component';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MinNavBarComponent,
-    HomeComponent
+    HomeComponent,
+    MinBoxComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -25,7 +28,8 @@ const appRoutes: Routes = [
       { enableTracing: false } // <-- debugging purposes only
     ),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
