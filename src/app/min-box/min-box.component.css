@@ -1,0 +1,16 @@
+.box {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%
+}
+
+.gutter {
+    width: 100%;
+}
+
+div {
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+}

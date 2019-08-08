@@ -3,6 +3,7 @@
     <img [src]="logoURL" class="logo-image"/>
   </div>
   <div class="controls" *ngIf="navControl">
+    <p id="app_name">Streamline</p>
     <div class="control" *ngFor="let control of navControl">
       <button class="nav-button" (click)="actionHandlers[control.funcIndex]()" [id]="control.text"
       (mouseenter) ="mouseEnterButton(control.text)"  (mouseleave) ="mouseLeaveButton(control.text)">{{control.text}}</button>
