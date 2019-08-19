@@ -21,6 +21,12 @@ export class MinFormComponent implements OnInit {
   @Input()
   description: string
 
+  @Input()
+  submit: Function;
+
+  @Input()
+  cancel: Function;
+
   formVals: formVal[];
 
   formControls: {[name: string]: FormControl};
@@ -60,6 +66,19 @@ export class MinFormComponent implements OnInit {
     }
 
     console.log(this.formVals);
+  }
+
+  onSubmit() {
+    var obj: {[k: string]: any} = {};
+    for (let v of this.formVals) {
+      obj[v.title] = this.formControls[v.title].value;
+    }
+    this.submit(obj);
+
+  }
+
+  onCancel() {
+    this.cancel();
   }
 
 }

@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { MinBoxComponent } from './min-box/min-box.component';
 import { MinFormComponent } from './min-form/min-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MinButtonComponent } from './min-button/min-button.component';
 
 
 
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
     HomeComponent,
     MinBoxComponent,
     MinFormComponent,
-    MinButtonComponent
   ],
   imports: [
     RouterModule.forRoot(

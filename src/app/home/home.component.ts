@@ -31,4 +31,12 @@ export class HomeComponent {
     window.alert("test ");
   }
 
+  onSubmit(object: any) {
+    console.log(object);
+  }
+
+  onCancel() {
+    window.alert('User cancelled');
+  }
+
 }

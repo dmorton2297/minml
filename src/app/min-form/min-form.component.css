@@ -2,6 +2,12 @@ div {
     font-family: Arial, Geneva, Helvetica, sans-serif;
 }
 
+button {
+    border: none;
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
 .title {
     margin-left: 10px;
     padding-top: 10px;
@@ -52,6 +58,33 @@ div {
 .checkbox-container {
     display: flex;
     width: 30%;
+}
+
+
+.submit {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #32CD32;
+}
+
+.submit:hover {
+    background-color: #228B22;
+}
+
+.cancel {
+    padding: 10px 20px; 
+    background-color: #DC143C;
+}
+
+.cancel:hover {
+    background-color: #B22222;
+}
+
+.button-row {
+    margin-bottom: 10px;
+    display: flex;
+    width: 20%;
+    margin-top: 20px;
 }
 
 input[type=text] {
