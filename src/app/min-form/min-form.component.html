@@ -1,0 +1,49 @@
+<div id="main-box" class="box">
+  <div class="gutter"></div>
+
+  <div>
+    <h2 class="title">{{title}}</h2>
+    <h3 class="description">{{description}}</h3>
+    <div *ngFor="let t of formVals" class="input">
+      <div *ngIf="t.type === 'string'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <input class="input-control" type="text" [formControl]="formControls[t.title]">
+      </div>
+      <div *ngIf="t.type === 'date'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <input class="input-control" type="date" [formControl]="formControls[t.title]">
+      </div>
+      <div *ngIf="t.type === 'number'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <input class="input-control" type="number" [formControl]="formControls[t.title]">
+      </div>
+      <div *ngIf="t.type === 'radio'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <label *ngFor="let option of t.options" class="md-check">
+          <input type="radio" value="{{option}}" name="{{t.title}}" [formControl]="formControls[t.title]">
+          {{option}}
+        </label>
+      </div>
+      <div *ngIf="t.type === 'password'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <input class="input-control" type="password" [formControl]="formControls[t.title]">
+      </div>
+      <div *ngIf="t.type === 'time'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <input class="input-control" type="time" [formControl]="formControls[t.title]">
+      </div>
+      <div *ngIf="t.type === 'color'">
+        <h4 class="input-title">{{t.title}}</h4>
+        <input class="color-input" type="color" [formControl]="formControls[t.title]">
+      </div>
+      <div *ngIf="t.type === 'checkbox'">
+        <div class="checkbox-container">
+          <h4 class="input-title">{{t.title}}</h4>
+          <div class="fill"></div>
+          <input type="checkbox" [formControl]="formControls[t.title]">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gutter"></div>
+</div>

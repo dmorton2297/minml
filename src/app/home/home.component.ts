@@ -20,6 +20,11 @@ export class HomeComponent {
   public prim = "#1a2c56";
   public sec = "#333745";
   public offwhite = "#e5e5e5";
+  public formTypes = ["Name:string", "Date:date",
+   "Count:number", "Gender:radio,Male,Female,Non-binary,Unicorn,Word with space",
+   "Checkbox:checkbox"]
+  public title = "Data entry";
+  public description = "Description for a particular form";
   
   test() {
     window.alert("test ");
