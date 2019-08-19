@@ -156,7 +156,7 @@ export class MinFormComponent implements OnInit {
 
   /**
    * ## Input
-   * **required** Iput for a function that handles the case when 
+   * **required** Input for a function that handles the case when 
    * a user clicks cancel on the form. The funciton passed into this input
    * should not take any parameters.
    * 
