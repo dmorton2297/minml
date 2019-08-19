@@ -1,0 +1,85 @@
+div {
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+}
+
+.title {
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+}
+
+.description {
+    margin-top: 0px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.input {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.input-title {
+    margin-bottom: 3px;
+}
+
+.input-control {
+    width: 100%
+}
+
+.box {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%
+}
+
+.gutter {
+    width: 100%;
+}
+
+.color-input {
+    width: 50%;
+}
+
+.fill {
+    flex-grow: 1;
+}
+
+.checkbox-container {
+    display: flex;
+    width: 30%;
+}
+
+input[type=text] {
+    padding: 10px 20px;
+}
+
+input[type=date] {
+    padding: 10px 20px;
+}
+
+input[type=number] {
+    padding: 10px 20px;
+}
+
+input[type="password"] {
+    padding: 10px 20px;
+}
+
+input[type="time"] {
+    padding: 10px 20px;
+}
+
+input[type="color"] {
+    padding: 10px 20px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+}
