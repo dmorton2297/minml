@@ -69,7 +69,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>#Example Use</p>
+						<a href="#example-use" id="example-use" style="color: inherit; text-decoration: none;">
+							<h1>Example Use</h1>
+						</a>
 					</div>
 					<p>Typescript</p>
 					<pre><code class="language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> HomeComponent {
@@ -132,8 +134,6 @@ onCancel() {
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#cancel" class="tsd-kind-icon">cancel</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#formcontrols" class="tsd-kind-icon">form<wbr>Controls</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#formvals" class="tsd-kind-icon">form<wbr>Vals</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#primarycolor" class="tsd-kind-icon">primary<wbr>Color</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#submit" class="tsd-kind-icon">submit</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="minformcomponent.html#title" class="tsd-kind-icon">title</a></li>
@@ -164,9 +164,14 @@ onCancel() {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L69">app/min-form/min-form.component.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L188">app/min-form/min-form.component.ts:188</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>ignore</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <a href="minformcomponent.html" class="tsd-signature-type">MinFormComponent</a></h4>
 						</li>
 					</ul>
@@ -180,9 +185,28 @@ onCancel() {
 					<div class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L65">app/min-form/min-form.component.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L178">app/min-form/min-form.component.ts:178</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#input" id="input" style="color: inherit; text-decoration: none;">
+								<h2>Input</h2>
+							</a>
+							<p><strong>required</strong> Iput for a function that handles the case when
+								a user clicks cancel on the form. The funciton passed into this input
+							should not take any parameters.</p>
+						</div>
+						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+							<h3>Example</h3>
+						</a>
+						<p>Typescript</p>
+						<pre><code class="language-typescript">onCancel() {
+ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Form Cancelled'</span>);
+}</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-form</span> [<span class="hljs-attr">cancel</span>]=<span class="hljs-string">"onCancel"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-form</span>&gt;</span></code></pre>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="description" class="tsd-anchor"></a>
@@ -190,37 +214,24 @@ onCancel() {
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L59">app/min-form/min-form.component.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L130">app/min-form/min-form.component.ts:130</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="formcontrols" class="tsd-anchor"></a>
-					<h3>form<wbr>Controls</h3>
-					<div class="tsd-signature tsd-kind-icon">form<wbr>Controls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L69">app/min-form/min-form.component.ts:69</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">FormControl</span></h5>
-							</li>
-						</ul>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#input" id="input" style="color: inherit; text-decoration: none;">
+								<h2>Input</h2>
+							</a>
+							<p><strong>required</strong> Input for the description of the form.</p>
+						</div>
+						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+							<h3>Example</h3>
+						</a>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-keyword">public</span> description = <span class="hljs-string">'A description'</span>;</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-form</span> [<span class="hljs-attr">description</span>]=<span class="hljs-string">"description"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-form</span>&gt;</span></code></pre>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="formvals" class="tsd-anchor"></a>
-					<h3>form<wbr>Vals</h3>
-					<div class="tsd-signature tsd-kind-icon">form<wbr>Vals<span class="tsd-signature-symbol">:</span> <a href="formval.html" class="tsd-signature-type">formVal</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L67">app/min-form/min-form.component.ts:67</a></li>
-						</ul>
-					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="primarycolor" class="tsd-anchor"></a>
@@ -228,9 +239,24 @@ onCancel() {
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L53">app/min-form/min-form.component.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L92">app/min-form/min-form.component.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#input" id="input" style="color: inherit; text-decoration: none;">
+								<h2>Input</h2>
+							</a>
+							<p><strong>required</strong> Input for the primary background color of the form.</p>
+						</div>
+						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+							<h3>Example</h3>
+						</a>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-keyword">public</span> primColor = <span class="hljs-string">'#ffffff'</span>;</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-form</span> [<span class="hljs-attr">primaryColor</span>]=<span class="hljs-string">"primColor"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-form</span>&gt;</span></code></pre>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="submit" class="tsd-anchor"></a>
@@ -238,9 +264,30 @@ onCancel() {
 					<div class="tsd-signature tsd-kind-icon">submit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L62">app/min-form/min-form.component.ts:62</a></li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L155">app/min-form/min-form.component.ts:155</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#input" id="input" style="color: inherit; text-decoration: none;">
+								<h2>Input</h2>
+							</a>
+							<p><strong>required</strong> Input for a function that handles sumbitting the form.
+								A json object is sent to this function. The object itself is based
+								on the types array that is passed into the form as an object. The
+								function passed in as input must have one paramater, an object of
+							type any, that allows the form data to be passed through.</p>
+						</div>
+						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+							<h3>Example</h3>
+						</a>
+						<p>Typescript</p>
+						<pre><code class="language-typescript">onSubmit(object: <span class="hljs-built_in">any</span>) {
+ <span class="hljs-built_in">console</span>.log(object);
+}</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-form</span> [<span class="hljs-attr">submit</span>]=<span class="hljs-string">"onSubmit"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-form</span>&gt;</span></code></pre>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="title" class="tsd-anchor"></a>
@@ -248,9 +295,24 @@ onCancel() {
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L56">app/min-form/min-form.component.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L111">app/min-form/min-form.component.ts:111</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#input" id="input" style="color: inherit; text-decoration: none;">
+								<h2>Input</h2>
+							</a>
+							<p><strong>required</strong> Input for the title of the form.</p>
+						</div>
+						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+							<h3>Example</h3>
+						</a>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-keyword">public</span> title = <span class="hljs-string">'A title'</span>;</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-form</span> [<span class="hljs-attr">title</span>]=<span class="hljs-string">"title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-form</span>&gt;</span></code></pre>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="types" class="tsd-anchor"></a>
@@ -258,9 +320,32 @@ onCancel() {
 					<div class="tsd-signature tsd-kind-icon">types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L50">app/min-form/min-form.component.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L73">app/min-form/min-form.component.ts:73</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<a href="#input" id="input" style="color: inherit; text-decoration: none;">
+								<h2>Input</h2>
+							</a>
+							<p><strong>required</strong> Input array that specifies the contents of a particular form.
+								Each value in this array must follow the format &#39;{Name}:{Type}&#39;.
+								The form input type radio box has options, and follows a special form.
+								Radio box follow the form &#39;{Name}:radio,{Option1},{Option2},...,{OptionN}&#39;
+								where each option follows the &#39;radio&#39; type signifier in a comma seperated list
+							with <strong>no spaces</strong>.</p>
+						</div>
+						<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+							<h3>Example</h3>
+						</a>
+						<p>Typescript</p>
+						<pre><code class="language-typescript"><span class="hljs-comment">// Array specifying the fields and types of the form</span>
+<span class="hljs-keyword">public</span> formTypes = [<span class="hljs-string">"Name:string"</span>, <span class="hljs-string">"Date:date"</span>,
+<span class="hljs-string">"Count:number"</span>, <span class="hljs-string">"Gender:radio,Male,Female,Non-binary,Unicorn,Word with space"</span>,
+<span class="hljs-string">"Checkbox:checkbox"</span>]</code></pre>
+						<p>Html</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">min-form</span> [<span class="hljs-attr">types</span>]=<span class="hljs-string">'formTypes'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">min-form</span>&gt;</span></code></pre>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -275,9 +360,14 @@ onCancel() {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L73">app/min-form/min-form.component.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L198">app/min-form/min-form.component.ts:198</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>ignore</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -292,9 +382,14 @@ onCancel() {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L117">app/min-form/min-form.component.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L251">app/min-form/min-form.component.ts:251</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>ignore</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -309,9 +404,14 @@ onCancel() {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L108">app/min-form/min-form.component.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L239">app/min-form/min-form.component.ts:239</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>ignore</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -326,9 +426,14 @@ onCancel() {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/36974e0/src/app/min-form/min-form.component.ts#L78">app/min-form/min-form.component.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/dmorton2297/minml/blob/fe1c113/src/app/min-form/min-form.component.ts#L206">app/min-form/min-form.component.ts:206</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>ignore</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -364,12 +469,6 @@ onCancel() {
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="minformcomponent.html#description" class="tsd-kind-icon">description</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="minformcomponent.html#formcontrols" class="tsd-kind-icon">form<wbr>Controls</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="minformcomponent.html#formvals" class="tsd-kind-icon">form<wbr>Vals</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="minformcomponent.html#primarycolor" class="tsd-kind-icon">primary<wbr>Color</a>
