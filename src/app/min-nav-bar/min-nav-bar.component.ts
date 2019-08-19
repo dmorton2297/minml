@@ -212,7 +212,7 @@ export class MinNavBarComponent implements OnInit, AfterViewChecked{
   }
 
   /**
-   * ignore
+   * @hidden
    */
   loadDesktopControls() {
       // apply all the actions to the navigation buttons
@@ -237,7 +237,7 @@ export class MinNavBarComponent implements OnInit, AfterViewChecked{
   }
 
   /**
-   * ignore
+   * @hidden
    */
   loadMobileControls() {
     this.navControl = [];

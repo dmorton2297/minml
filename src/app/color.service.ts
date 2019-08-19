@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * @hidden
+ */
 export class ColorService {
 
   constructor() { }
