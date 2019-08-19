@@ -1,0 +1,10 @@
+button {
+    padding: 10px 20px;
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    font-size: 11pt;
+    border: none;
+}
+
+button:hover {
+    background-color: yellow
+}
