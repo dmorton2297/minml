@@ -69,8 +69,8 @@ export class MinFormComponent implements OnInit {
    * <min-form [types]='formTypes'></min-form>
    * ```
    */
-  @Input() 
-  types : string[]
+  @Input()
+  types: string[]
 
   /**
    * ## Input
@@ -88,9 +88,9 @@ export class MinFormComponent implements OnInit {
    * ```
    * 
    */
-  @Input() 
+  @Input()
   primaryColor: string
-  
+
   /**
    * ## Input
    * **required** Input for the title of the form.
@@ -185,15 +185,15 @@ export class MinFormComponent implements OnInit {
   /**
    * @hidden
    */
-  formControls: {[name: string]: FormControl};
+  formControls: { [name: string]: FormControl };
 
   /**
-   * ignore
+   * @hidden
    */
-  constructor() {}
-  
+  constructor() { }
+
   /**
-   * ignore
+   * @hidden
    */
   ngOnInit() {
     document.getElementById('main-box').style.backgroundColor = this.primaryColor;
@@ -201,7 +201,7 @@ export class MinFormComponent implements OnInit {
   }
 
   /**
-   * ignore
+   * @hidden
    */
   parseInput() {
     this.formVals = [];
@@ -214,7 +214,7 @@ export class MinFormComponent implements OnInit {
         hasOptions = true;
       }
 
-      let fVal : formVal = {
+      let fVal: formVal = {
         title: temp[0],
         type: temp[1],
         options: []
@@ -225,7 +225,7 @@ export class MinFormComponent implements OnInit {
         let opts = options.slice(1, options.length);
         fVal.options = opts;
       }
-      
+
       this.formVals.push(fVal);
       this.formControls[fVal.title] = new FormControl('');
     }
@@ -234,10 +234,10 @@ export class MinFormComponent implements OnInit {
   }
 
   /**
-   * ignore
-   */
+  * @hidden
+  */
   onSubmit() {
-    var obj: {[k: string]: any} = {};
+    var obj: { [k: string]: any } = {};
     for (let v of this.formVals) {
       obj[v.title] = this.formControls[v.title].value;
     }
@@ -246,8 +246,8 @@ export class MinFormComponent implements OnInit {
   }
 
   /**
-   * ignore
-   */
+  * @hidden
+  */
   onCancel() {
     this.cancel();
   }
@@ -255,8 +255,8 @@ export class MinFormComponent implements OnInit {
 }
 
 /**
-   * ignore
-   */
+* @hidden
+*/
 class formVal {
   title: string
   type: string
