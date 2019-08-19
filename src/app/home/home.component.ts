@@ -25,6 +25,7 @@ export class HomeComponent {
    "Checkbox:checkbox"]
   public title = "Data entry";
   public description = "Description for a particular form";
+  public buttonColor = "#4aff8f";
   
   test() {
     window.alert("test ");
